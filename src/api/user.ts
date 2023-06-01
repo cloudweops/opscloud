@@ -10,6 +10,8 @@ export interface LoginData {
 export interface LoginRes {
   token: string;
 }
+// data: LoginData data 对象必须满足 LoginData 接口约束
+// axios.post<LoginRes> <> 表示泛型，约束了必须返回符合 LoginRes 的接口约束
 export function login(data: LoginData) {
   return axios.post<LoginRes>('/api/user/login', data);
 }

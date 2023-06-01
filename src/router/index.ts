@@ -11,6 +11,7 @@ NProgress.configure({ showSpinner: false }); // NProgress Configuration
 const router = createRouter({
   history: createWebHistory(),
   routes: [
+    // 页面路由从上到下匹配。
     {
       path: '/',
       redirect: 'login',
@@ -18,6 +19,7 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
+      // 惰性路由，不直接import的原因是防止初始化加载大量路由。
       component: () => import('@/views/login/index.vue'),
       meta: {
         requiresAuth: false,

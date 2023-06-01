@@ -1,7 +1,7 @@
 <template>
   <div class="login-form-wrapper">
     <div class="login-form-title">{{ $t('login.form.title') }}</div>
-    <div class="login-form-sub-title">{{ $t('login.form.title') }}</div>
+    <!-- <div class="login-form-sub-title">{{ $t('login.form.title') }}</div> -->
     <div class="login-form-error-msg">{{ errorMessage }}</div>
     <a-form
       ref="loginForm"
@@ -94,6 +94,7 @@
     errors,
     values,
   }: {
+    // Record 相当于 go 的 map，需要指定kv的类型
     errors: Record<string, ValidatedError> | undefined;
     values: Record<string, any>;
   }) => {

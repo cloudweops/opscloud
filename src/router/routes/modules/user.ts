@@ -4,6 +4,7 @@ import { AppRouteRecordRaw } from '../types';
 const USER: AppRouteRecordRaw = {
   path: '/user',
   name: 'user',
+  // 继承父组件
   component: DEFAULT_LAYOUT,
   meta: {
     locale: 'menu.user',
