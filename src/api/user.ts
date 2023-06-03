@@ -8,12 +8,16 @@ export interface LoginData {
 }
 
 export interface LoginRes {
-  token: string;
+  access_token: string;
+  issue_at: number;
+  access_expired_at: number;
+  refresh_token: string;
+  refresh_expired_at: number;
 }
 // data: LoginData data 对象必须满足 LoginData 接口约束
 // axios.post<LoginRes> <> 表示泛型，约束了必须返回符合 LoginRes 的接口约束
 export function login(data: LoginData) {
-  return axios.post<LoginRes>('/api/user/login', data);
+  return axios.post<LoginRes>('/mcenter/api/v1/token', data);
 }
 
 export function logout() {
