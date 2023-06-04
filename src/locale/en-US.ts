@@ -29,6 +29,8 @@ import localeUserSetting from '@/views/user/setting/locale/en-US';
 import localeSettings from './en-US/settings';
 
 export default {
+  'menu.mcenter.user': 'User',
+  'menu.mcenter.user.list': 'User List',
   'menu.dashboard': 'Dashboard',
   'menu.server.dashboard': 'Dashboard-Server',
   'menu.server.workplace': 'Workplace-Server',

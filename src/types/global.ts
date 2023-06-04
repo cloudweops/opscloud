@@ -29,6 +29,12 @@ export interface Pagination {
   total?: number;
 }
 
+export interface McenterPagination {
+  pageNumber: number;
+  pageSize: number;
+  total?: number;
+}
+
 export type TimeRanger = [string, string];
 
 export interface GeneralChart {
